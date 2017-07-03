@@ -20,6 +20,7 @@ module.exports = {
   /*
   ** Build configuration
   */
+  plugins: ['~/plugins/buefy.js'],
   build: {
     /*
     ** Run ESLINT on save

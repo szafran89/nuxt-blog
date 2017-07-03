@@ -1,9 +1,5 @@
 <template>
   <div>
-    <nuxt/>
+    <nuxt></nuxt>
   </div>
 </template>
-
-<style lang="scss">
-
-</style>

@@ -5,6 +5,7 @@
   "author": "Szafran <szafran89@gmail.com>",
   "private": true,
   "dependencies": {
+    "buefy": "^0.4.4",
     "nuxt": "latest"
   },
   "scripts": {
