@@ -12,6 +12,11 @@ const store = () => {
         commit('SET_POSTS', data)
       }
     },
+    getters: {
+      getPostBySlug: (state, getters) => (slug) => {
+        return state.posts.find(post => post.slug === slug)
+      }
+    },
     mutations: {
       SET_POSTS: (state, posts) => {
         posts.forEach(item => {

@@ -8,11 +8,11 @@
         <article class="media">
           <div class="media-content">
             <div class="content">
-              <a>
+              <nuxt-link :to="'/'+ post.slug">
                 <strong>
                   {{ post.title }}
                 </strong>
-              </a>
+              </nuxt-link>
               <br>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
             </div>
