@@ -4,6 +4,32 @@
       <h1 class="title">
         Posts
       </h1>
+      <div class="box" v-for="post in posts">
+        <article class="media">
+          <div class="media-content">
+            <div class="content">
+              <a>
+                <strong>
+                  {{ post.title }}
+                </strong>
+              </a>
+              <br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 </template>
+
+<script>
+
+export default {
+  data () {
+    return {
+      posts: this.$store.state.posts
+    }
+  }
+}
+</script>
