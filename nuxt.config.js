@@ -21,6 +21,9 @@ module.exports = {
   ** Build configuration
   */
   plugins: ['~/plugins/buefy.js'],
+  router: {
+    middleware: 'menu'
+  },
   build: {
     /*
     ** Run ESLINT on save
