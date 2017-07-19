@@ -20,7 +20,6 @@ const store = () => {
     },
     mutations: {
       TOGGLE_MENU (state) {
-        console.log('change')
         state.menuIsActive = !state.menuIsActive
       },
       SET_POSTS: (state, posts) => {

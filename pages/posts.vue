@@ -4,7 +4,7 @@
       <h1 class="title">
         Posts
       </h1>
-      <div class="box" v-for="post in posts">
+      <div class="box" v-for="post in posts" :key="post">
         <article class="media">
           <div class="media-content">
             <div class="content">
@@ -26,6 +26,14 @@
 <script>
 
 export default {
+  head () {
+    return {
+      title: 'Posts',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Posts list' }
+      ]
+    }
+  },
   data () {
     return {
       posts: this.$store.state.posts

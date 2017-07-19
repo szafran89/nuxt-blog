@@ -11,6 +11,11 @@
 
 <script>
   export default {
+    head () {
+      return {
+        title: this.post.title
+      }
+    },
     async asyncData (context) {
       const slug = context.route.params.slug
       const post = context.store.getters.getPostBySlug(slug)
