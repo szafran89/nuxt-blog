@@ -7,7 +7,8 @@
   "dependencies": {
     "buefy": "^0.4.4",
     "contentful": "^4.5.0",
-    "nuxt": "latest"
+    "nuxt": "1.0.0-rc3",
+    "vue-server-renderer": "latest"
   },
   "scripts": {
     "dev": "nuxt",
