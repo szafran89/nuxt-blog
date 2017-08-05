@@ -23,7 +23,10 @@ module.exports = {
   css: ['assets/main.css'],
   loading: { color: '#3B8070' },
   plugins: ['~/plugins/buefy.js'],
-  router: { middleware: 'menu' },
+  router: {
+    base: '/nuxt-blog/',
+    middleware: 'menu'
+  },
   generate: {
     routes: function () {
       return createClient({
