@@ -23,6 +23,9 @@ module.exports = {
   css: ['assets/main.css'],
   loading: { color: '#3B8070' },
   plugins: ['~/plugins/buefy.js'],
+  modules: [
+    '@nuxtjs/pwa'
+  ],
   router: {
     base: '/nuxt-blog/',
     middleware: 'menu'
