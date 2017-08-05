@@ -31,16 +31,16 @@ const fileManifest = [
     "revision": "7dd15850a8faa6c6f75e5380ac74a42a"
   },
   {
-    "url": "/nuxt-blog/_nuxt/3.nuxt.bundle.2c06e27b4452ef46a171.js",
-    "revision": "ae80b226309a99ff925b32e6490566a6"
+    "url": "/nuxt-blog/_nuxt/3.nuxt.bundle.894c948e6ebf5b28b31e.js",
+    "revision": "beac75c6c28a0201af467e676dbebcc0"
   },
   {
     "url": "/nuxt-blog/_nuxt/4.nuxt.bundle.d22cf9be33825d1218ca.js",
     "revision": "838353192e23c284420a3d0633f5c966"
   },
   {
-    "url": "/nuxt-blog/_nuxt/manifest.185117d2368e5fba1f23.js",
-    "revision": "d3be70e36a435e57b3044f086d5378dc"
+    "url": "/nuxt-blog/_nuxt/manifest.b11a79c0f8bdfa127e29.js",
+    "revision": "d5750ef83f8000dddd4eb64d4bebc6b6"
   },
   {
     "url": "/nuxt-blog/_nuxt/nuxt.bundle.50ba4e7f3b61d14679ed.js",
