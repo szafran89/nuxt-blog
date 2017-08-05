@@ -4,7 +4,7 @@
       <h1 class="title">
         Posts
       </h1>
-      <div class="box" v-for="post in posts" :key="post">
+      <div class="box" v-for="post in posts" :key="post.slug">
         <article class="media">
           <div class="media-content">
             <div class="content">

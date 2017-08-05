@@ -2,9 +2,9 @@
   <header>
     <nav class="nav">
       <div class="nav-left">
-        <a class="nav-item">
+        <nuxt-link class="nav-item" to="/">
           <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
-        </a>
+        </nuxt-link>
       </div>
       <div class="nav-center">
         <a class="nav-item">
