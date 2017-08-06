@@ -5,6 +5,7 @@
   "author": "Szafran <szafran89@gmail.com>",
   "private": true,
   "dependencies": {
+    "@nuxtjs/icon": "^1.0.1",
     "@nuxtjs/pwa": "^0.2.0",
     "buefy": "^0.4.4",
     "contentful": "^4.5.0",
