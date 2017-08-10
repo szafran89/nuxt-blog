@@ -17,8 +17,9 @@
       }
     },
     async asyncData (context) {
-      const slug = context.route.params.slug
-      const post = context.store.getters.getPostBySlug(slug)
+      let post = await context.store.getters.getPostBySlug(
+        context.route.params.slug
+      )
       return {
         post
       }
