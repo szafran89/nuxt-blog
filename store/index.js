@@ -5,12 +5,15 @@ const store = () => {
   return new Vuex.Store({
     state: {
       menuIsActive: false,
-      posts: []
+      posts: [],
+      categories: []
     },
     actions: {
       async nuxtServerInit ({ commit }, { req }) {
         const data = await api.getPosts()
+        const categories = await api.getCategories()
         commit('SET_POSTS', data)
+        commit('SET_CATEGORIES', categories)
       }
     },
     getters: {
@@ -33,6 +36,16 @@ const store = () => {
               categories: item.fields.category
             }
             state.posts.push(entry)
+          }
+        })
+      },
+      SET_CATEGORIES: (state, categories) => {
+        categories.forEach(item => {
+          if (item) {
+            let entry = {
+              title: item.fields.title
+            }
+            state.categories.push(entry)
           }
         })
       }
