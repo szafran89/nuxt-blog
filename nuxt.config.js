@@ -31,7 +31,7 @@ module.exports = {
     '@nuxtjs/icon'
   ],
   router: {
-    // base: '/nuxt-blog/',
+    base: '/nuxt-blog/',
     middleware: 'menu'
   },
   generate: {

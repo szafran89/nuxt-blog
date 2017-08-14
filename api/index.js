@@ -19,7 +19,7 @@ export default {
       content_type: config.contentTypes.posts,
       'fields.slug': slug
     })
-    return await data.items[0].fields
+    return await data.items[0]
   },
   async getCategories () {
     const data = await this.client.getEntries({

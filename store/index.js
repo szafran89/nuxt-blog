@@ -66,7 +66,16 @@ const store = () => {
         })
       },
       SET_POST: (state, post) => {
-        state.currentPost = post
+        state.currentPost = {
+          id: post.sys.id,
+          title: post.fields.title,
+          slug: post.fields.slug,
+          body: post.fields.body,
+          date: post.fields.date,
+          featuredImage: post.fields.featuredImage,
+          tags: post.fields.tags,
+          categories: post.fields.category
+        }
       }
     }
   })

@@ -9,7 +9,8 @@
     "@nuxtjs/pwa": "^0.2.0",
     "buefy": "^0.4.4",
     "contentful": "^4.5.0",
-    "nuxt": "1.0.0-rc4"
+    "nuxt": "1.0.0-rc3",
+    "vue-server-renderer": "latest"
   },
   "scripts": {
     "dev": "nuxt",
