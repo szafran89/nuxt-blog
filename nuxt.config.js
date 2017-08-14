@@ -21,7 +21,10 @@ module.exports = {
     ]
   },
   css: ['assets/main.css'],
-  loading: { color: '#3B8070' },
+  loading: {
+    color: '#3B8070',
+    failedColor: '#FF0000'
+  },
   plugins: ['~/plugins/buefy.js'],
   modules: [
     '@nuxtjs/pwa',

@@ -30,13 +30,20 @@ export default {
     return {
       title: 'Posts',
       meta: [
-        { hid: 'description', name: 'description', content: 'Posts list' }
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Posts list'
+        }
       ]
     }
   },
-  data () {
-    return {
-      posts: this.$store.state.posts
+  fetch ({store}) {
+    store.dispatch('getPosts')
+  },
+  computed: {
+    posts () {
+      return this.$store.state.posts
     }
   }
 }

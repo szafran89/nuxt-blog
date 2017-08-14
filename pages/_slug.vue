@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="title">
-      {{ post.title }}
+     {{ post.title }}
     </h1>
     <div>
       {{ post.body }}
@@ -16,12 +16,14 @@
         title: this.post.title
       }
     },
-    async asyncData (context) {
-      let post = await context.store.getters.getPostBySlug(
-        context.route.params.slug
-      )
-      return {
-        post
+    fetch ({ store, params }) {
+      if (store.state.currentPost.slug !== params.slug) {
+        store.dispatch('getPost', params.slug)
+      }
+    },
+    computed: {
+      post () {
+        return this.$store.state.currentPost
       }
     }
   }

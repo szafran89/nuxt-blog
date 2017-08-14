@@ -24,7 +24,7 @@
         <span></span>
       </span>
       <div class="nav-right nav-menu" :class="{'is-active': menuIsActive}">
-        <nuxt-link v-for="category in cats" :key="category.title" class="nav-item" to="/">
+        <nuxt-link v-for="category in categories" :key="category.title" class="nav-item" to="/">
           {{ category.title}}
         </nuxt-link>
         <nuxt-link class="nav-item" to="/">Home</nuxt-link>
@@ -37,33 +37,16 @@
 
 <script>
   import { mapState } from 'vuex'
-  import { createClient } from 'contentful'
-  import api from '../api/index'
-  import config from '../api/config'
 
   export default {
-    data () {
-      return {
-        cats: []
-      }
-    },
     computed: mapState([
-      'menuIsActive'
+      'menuIsActive',
+      'categories'
     ]),
     methods: {
       toggleMenu () {
         this.$store.commit('TOGGLE_MENU')
       }
-    },
-    created() {
-      this.cats = this.$store.state.categories
-      const data = createClient({
-    space: config.space,
-    accessToken: config.accessToken
-  }).getEntries({
-       content_type: config.contentTypes.posts
-     })
-     console.log(data)
     }
   }
 </script>

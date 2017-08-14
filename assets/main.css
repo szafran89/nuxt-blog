@@ -7,3 +7,7 @@
 .page-leave-active {
   transition: all 0.2s ease;
 }
+
+.progress {
+  z-index: 15 !important;
+}

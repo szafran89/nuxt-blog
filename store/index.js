@@ -6,14 +6,29 @@ const store = () => {
     state: {
       menuIsActive: false,
       posts: [],
+      currentPost: {},
       categories: []
     },
     actions: {
-      async nuxtServerInit ({ commit }, { req }) {
-        const data = await api.getPosts()
+      async nuxtServerInit ({ commit }, {store, isClient, isServer, route, params}) {
+        if (isServer && route.name === 'posts') {
+          const data = await api.getPosts()
+          commit('SET_POSTS', data)
+        }
+        if (isServer && params.slug) {
+          const post = await api.getPostBySlug(params.slug)
+          commit('SET_POST', post)
+        }
         const categories = await api.getCategories()
-        commit('SET_POSTS', data)
         commit('SET_CATEGORIES', categories)
+      },
+      async getPosts ({commit}) {
+        const posts = await api.getPosts()
+        commit('SET_POSTS', posts)
+      },
+      async getPost ({commit, store}, slug) {
+        const post = await api.getPostBySlug(slug)
+        commit('SET_POST', post)
       }
     },
     getters: {
@@ -26,6 +41,7 @@ const store = () => {
         state.menuIsActive = !state.menuIsActive
       },
       SET_POSTS: (state, posts) => {
+        state.posts = []
         posts.forEach(item => {
           if (item) {
             let entry = {
@@ -48,6 +64,9 @@ const store = () => {
             state.categories.push(entry)
           }
         })
+      },
+      SET_POST: (state, post) => {
+        state.currentPost = post
       }
     }
   })
