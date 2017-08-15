@@ -31,7 +31,6 @@ module.exports = {
     '@nuxtjs/icon'
   ],
   router: {
-    mode: 'hash',
     base: '/nuxt-blog/',
     middleware: 'menu'
   },
