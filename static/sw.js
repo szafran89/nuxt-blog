@@ -39,12 +39,12 @@ const fileManifest = [
     "revision": "35dafa36f7fa27bec74777ded3b51e06"
   },
   {
-    "url": "/nuxt-blog/_nuxt/manifest.c9c2861b8c3aff263012.js",
-    "revision": "ea63f49f7eb7582ea130d481fa907dbd"
+    "url": "/nuxt-blog/_nuxt/manifest.dc958bc7a88c20b92225.js",
+    "revision": "fa4e6526e0dd1d74b019669fdc1bad7d"
   },
   {
-    "url": "/nuxt-blog/_nuxt/nuxt.bundle.2ba6a49958974713ef5e.js",
-    "revision": "1f70f833f2cb7603884c3b8367a9c841"
+    "url": "/nuxt-blog/_nuxt/nuxt.bundle.4e344a11653fef32ae0a.js",
+    "revision": "107f77e99d4af48e92326716964c2369"
   },
   {
     "url": "/nuxt-blog/_nuxt/vendor.bundle.1bdea4bacb1ed953b93f.js",

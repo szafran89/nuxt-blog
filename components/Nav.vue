@@ -3,7 +3,7 @@
     <nav class="nav">
       <div class="nav-left">
         <nuxt-link class="nav-item" to="/">
-          <img src="/bulma-logo.png" alt="Bulma logo">
+          <img src="~/static/bulma-logo.png" alt="Bulma logo">
         </nuxt-link>
       </div>
       <div class="nav-center">
