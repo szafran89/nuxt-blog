@@ -11,20 +11,22 @@ const store = () => {
     },
     actions: {
       async nuxtServerInit ({ commit }, {store, isClient, isServer, route, params}) {
-        if (isServer && route.name === 'posts') {
+        if (isServer && (route.name === 'posts' || route.name === 'category-slug')) {
           const data = await api.getPosts()
           commit('SET_POSTS', data)
         }
-        if (isServer && params.slug) {
+        if (isServer && params.slug && route.name === 'slug') {
           const post = await api.getPostBySlug(params.slug)
           commit('SET_POST', post)
         }
         const categories = await api.getCategories()
         commit('SET_CATEGORIES', categories)
       },
-      async getPosts ({commit}) {
-        const posts = await api.getPosts()
-        commit('SET_POSTS', posts)
+      async getPosts ({commit, state}) {
+        if (state.posts.length === 0) {
+          const posts = await api.getPosts()
+          commit('SET_POSTS', posts)
+        }
       },
       async getPost ({commit, store}, slug) {
         const post = await api.getPostBySlug(slug)
@@ -32,8 +34,13 @@ const store = () => {
       }
     },
     getters: {
-      getPostBySlug: (state, getters) => (slug) => {
-        return state.posts.find(post => post.slug === slug)
+      getPostsByCategorySlug: (state, getters) => (slug) => {
+        return state.posts.filter(post => {
+          return post.categories.find(category => category.fields.slug === slug) !== undefined
+        })
+      },
+      getCategoryBySlug: (state, getters) => (slug) => {
+        return state.categories.find(category => category.slug === slug)
       }
     },
     mutations: {
@@ -59,6 +66,8 @@ const store = () => {
         categories.forEach(item => {
           if (item) {
             let entry = {
+              id: item.sys.id,
+              slug: item.fields.slug,
               title: item.fields.title
             }
             state.categories.push(entry)
