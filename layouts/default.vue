@@ -5,7 +5,7 @@
       <div class="container">
         <nuxt></nuxt>
       </div>
-    </section class="section">
+    </section>
     <app-footer></app-footer>
   </div>
 </template>

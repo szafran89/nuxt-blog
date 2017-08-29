@@ -10,7 +10,7 @@
               </strong>
             </nuxt-link>
             <br>
-            {{ truncate(post.body) }}
+            {{ post.intro }}
           </div>
         </div>
       </article>
@@ -20,9 +20,6 @@
 
 <script>
   export default {
-    props: ['posts'],
-    methods: {
-      truncate: (string) => `${string.substring(0, 170)}...`
-    }
+    props: ['posts']
   }
 </script>
