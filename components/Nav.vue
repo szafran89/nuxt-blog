@@ -28,7 +28,6 @@
         <nuxt-link v-for="category in categories" :key="category.id" class="nav-item" :to="/category/ + category.slug">
           {{ category.title}}
         </nuxt-link>
-        <nuxt-link class="nav-item" to="/posts">Posts</nuxt-link>
         <nuxt-link class="nav-item" to="/about">About</nuxt-link>
       </div>
     </nav>

@@ -11,7 +11,7 @@ const store = () => {
     },
     actions: {
       async nuxtServerInit ({ commit }, {store, isClient, isServer, route, params}) {
-        if (isServer && (route.name === 'posts' || route.name === 'category-slug')) {
+        if (isServer && (route.name === 'index' || route.name === 'category-slug')) {
           const data = await api.getPosts()
           commit('SET_POSTS', data)
         }
