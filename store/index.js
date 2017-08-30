@@ -1,6 +1,6 @@
 import Vuex from 'vuex'
 import api from '../api/index'
-
+import slugify from './slugify'
 const store = () => {
   return new Vuex.Store({
     state: {
@@ -36,7 +36,7 @@ const store = () => {
     getters: {
       getPostsByCategorySlug: (state, getters) => (slug) => {
         return state.posts.filter(post => {
-          return post.categories.find(category => category.fields.slug === slug) !== undefined
+          return post.categories.find(category => slugify(category.fields.title) === slug) !== undefined
         })
       },
       getCategoryBySlug: (state, getters) => (slug) => {
@@ -68,8 +68,8 @@ const store = () => {
           if (item) {
             let entry = {
               id: item.sys.id,
-              slug: item.fields.slug,
-              title: item.fields.title
+              title: item.fields.title,
+              slug: slugify(item.fields.title)
             }
             state.categories.push(entry)
           }
@@ -83,7 +83,6 @@ const store = () => {
           body: post.fields.body,
           date: post.fields.date,
           featuredImage: post.fields.featuredImage,
-          tags: post.fields.tags,
           categories: post.fields.category
         }
       }
