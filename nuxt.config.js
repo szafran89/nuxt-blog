@@ -25,7 +25,10 @@ module.exports = {
     color: '#3B8070',
     failedColor: '#FF0000'
   },
-  plugins: ['~/plugins/buefy.js'],
+  plugins: [
+    '~/plugins/buefy.js',
+    '~/plugins/moment'
+  ],
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/icon'

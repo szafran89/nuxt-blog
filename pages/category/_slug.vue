@@ -28,10 +28,8 @@
         ]
       }
     },
-    fetch ({store}) {
-      store.dispatch('getPosts')
-    },
     async asyncData (context) {
+      await context.store.dispatch('getPosts')
       const posts = await context.store.getters.getPostsByCategorySlug(
         context.route.params.slug
       )

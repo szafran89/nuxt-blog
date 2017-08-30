@@ -9,8 +9,12 @@
                 {{ post.title }}
               </strong>
             </nuxt-link>
+            |
+            <span class="post-date">
+              Added: {{ post.date | moment("from") }}
+            </span>
             <br>
-            {{ post.intro }}
+            {{ truncate(post.body) }}
           </div>
         </div>
       </article>
@@ -20,6 +24,16 @@
 
 <script>
   export default {
-    props: ['posts']
+    props: ['posts'],
+    methods: {
+      truncate: string => `${string.replace(/<(?:.|\n)*?>/gm, '').substring(0, 140)}...`
+    }
+
   }
 </script>
+
+<style>
+  .post-date {
+    font-size: 12px;
+  }
+</style>

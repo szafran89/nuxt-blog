@@ -28,8 +28,8 @@
         ]
       }
     },
-    fetch ({store}) {
-      store.dispatch('getPosts')
+    async fetch ({store}) {
+      await store.dispatch('getPosts')
     },
     computed: {
       posts () {

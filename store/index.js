@@ -53,10 +53,9 @@ const store = () => {
           if (item) {
             let entry = {
               title: item.fields.title,
-              intro: item.fields.intro,
               body: item.fields.body,
               slug: item.fields.slug,
-              tags: item.fields.tags,
+              date: item.fields.date,
               categories: item.fields.category
             }
             state.posts.push(entry)
