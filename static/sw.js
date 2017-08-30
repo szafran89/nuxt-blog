@@ -19,40 +19,36 @@ importScripts('workbox-sw.prod.v1.3.0.js');
  */
 const fileManifest = [
   {
-    "url": "/nuxt-blog/_nuxt/app.e824791e0410175cb0ce.js",
-    "revision": "26999a409fd1ae73f92f8eb2ffea9808"
+    "url": "/nuxt-blog/_nuxt/app.333f9b365ef4903d0387.js",
+    "revision": "0848ac3007c7ca7aabe0de82497b3453"
   },
   {
     "url": "/nuxt-blog/_nuxt/common.3ef32530518c0356975f.js",
     "revision": "8c945294202e5335005ce4455c571574"
   },
   {
-    "url": "/nuxt-blog/_nuxt/layouts/default.14cd7541c14be7ac9647.js",
-    "revision": "1cd609b896158a52b7e3dc6c7f63cabd"
+    "url": "/nuxt-blog/_nuxt/layouts/default.faa6d8a97e9f897f4147.js",
+    "revision": "82ba75d694bb7df3c6dba82784d4429d"
   },
   {
-    "url": "/nuxt-blog/_nuxt/manifest.a04b581296feb58919a2.js",
-    "revision": "950b06ad2a49827fecbfd3d4b4601629"
+    "url": "/nuxt-blog/_nuxt/manifest.def4c054df1231ef8ff3.js",
+    "revision": "b9a096df426f40eca944866c187b9093"
   },
   {
-    "url": "/nuxt-blog/_nuxt/pages/_slug.2f847b4f56a075719bfd.js",
-    "revision": "cf86570920af466f3e61ca5e24b79eef"
+    "url": "/nuxt-blog/_nuxt/pages/_slug.f418cfec8f3db76cc946.js",
+    "revision": "a90c7a5cd95001f4fe629b0e12957c43"
   },
   {
-    "url": "/nuxt-blog/_nuxt/pages/about.3b1621dca722ab0c3ffe.js",
-    "revision": "1f06f3aef5c119fdcfe13991b73389d0"
+    "url": "/nuxt-blog/_nuxt/pages/about.8ac09c2e178f5dda4ecd.js",
+    "revision": "4858393c903aab16eab0dbbb80ede6c0"
   },
   {
-    "url": "/nuxt-blog/_nuxt/pages/category/_slug.19fd3884e20423338977.js",
-    "revision": "8c271e129d3f34f24c2d1ecb71caba06"
+    "url": "/nuxt-blog/_nuxt/pages/category/_slug.4aa4b56831c85f09323a.js",
+    "revision": "44436da248fea6b0a801d1819be34641"
   },
   {
-    "url": "/nuxt-blog/_nuxt/pages/index.dc9bdeab2ee3559d15a2.js",
-    "revision": "25374488ad40aeeb84305f8d4169c67f"
-  },
-  {
-    "url": "/nuxt-blog/_nuxt/pages/posts.037e6fe7182c98119d91.js",
-    "revision": "28dfe5fdd9efe36ad869f5baf40a1cec"
+    "url": "/nuxt-blog/_nuxt/pages/index.8824bac6b070a7e0152f.js",
+    "revision": "b19039ea119a2fea795e440fb02659af"
   }
 ];
 

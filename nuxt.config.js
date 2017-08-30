@@ -1,5 +1,6 @@
 const { createClient } = require('contentful')
 const apiConfig = require('./api/config')
+const slugify = require('./store/slugify')
 
 module.exports = {
   /*
@@ -39,7 +40,7 @@ module.exports = {
   },
   generate: {
     routes: function () {
-      return createClient({
+      const posts = createClient({
         space: apiConfig.space,
         accessToken: apiConfig.accessToken
       }).getEntries({
@@ -49,6 +50,22 @@ module.exports = {
         return entries.items.map((item) => {
           return item.fields.slug
         })
+      })
+
+      const categories = createClient({
+        space: apiConfig.space,
+        accessToken: apiConfig.accessToken
+      }).getEntries({
+        content_type: apiConfig.contentTypes.categories
+      })
+      .then(function (entries) {
+        return entries.items.map((item) => {
+          return 'category/' + slugify(item.fields.title)
+        })
+      })
+
+      return Promise.all([posts, categories]).then(values => {
+        return values.join().split(',')
       })
     }
   },

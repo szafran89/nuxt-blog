@@ -1,4 +1,4 @@
-export default function slugify (text) {
+module.exports = function slugify (text) {
   return text.toString().toLowerCase()
     .replace(/\s+/g, '-')
     .replace(/[^\w\-]+/g, '')
