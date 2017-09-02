@@ -14,9 +14,9 @@
         title: this.post.title
       }
     },
-    async fetch ({ store, params }) {
+    fetch ({ store, params }) {
       if (store.state.currentPost.slug !== params.slug) {
-        await store.dispatch('getPost', params.slug)
+        store.dispatch('getPost', params.slug)
       }
     },
     computed: {
