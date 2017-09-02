@@ -6,7 +6,7 @@
 
 To run a blog, firstly you have to connect with API. To do that follow below steps:
 
-1. Sign up for [Contentful](https://www.contentful.com/).
+1. Sign up for [Contentful](https://www.contentful.com/sign-up/).
 
 2. Log into Contentful and create new space. During creating new space you have to choose `Create an example space` and then select `Blog` tab.
 
