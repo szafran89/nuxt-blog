@@ -1,0 +1,8 @@
+export default {
+  space: '<space_id>',
+  accessToken: '<content_delivery_api_key>',
+  contentTypes: {
+    posts: '<posts_content_type_id>',
+    categories: '<categories_content_type_id>'
+  }
+}

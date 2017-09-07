@@ -2,7 +2,7 @@
   <section class="container">
     <div>
       <h1 class="title">
-        Posts
+        {{ category.title }}
       </h1>
       <post-list :posts="posts"></post-list>
     </div>
@@ -18,7 +18,7 @@
     },
     head () {
       return {
-        title: 'Posts',
+        title: `${this.category.title} - posts`,
         meta: [
           {
             hid: 'description',
@@ -28,12 +28,17 @@
         ]
       }
     },
-    async fetch ({store}) {
-      await store.dispatch('getPosts')
-    },
-    computed: {
-      posts () {
-        return this.$store.state.posts
+    async asyncData (context) {
+      await context.store.dispatch('getPosts')
+      const posts = await context.store.getters.getPostsByCategorySlug(
+        context.route.params.slug
+      )
+      const category = await context.store.getters.getCategoryBySlug(
+        context.route.params.slug
+      )
+      return {
+        posts,
+        category
       }
     }
   }

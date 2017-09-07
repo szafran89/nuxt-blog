@@ -1,25 +1,74 @@
+const { createClient } = require('contentful')
+const apiConfig = require('./api/config')
+const slugify = require('./store/slugify')
+
 module.exports = {
   /*
   ** Headers of the page
   */
   head: {
-    title: 'starter',
+    htmlAttrs: {
+      lang: 'en'
+    },
+    title: 'Blog App',
+    titleTemplate: 'Blog Name | %s',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'description', name: 'description', content: 'Front.Love main description' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#3B8070' },
-  /*
-  ** Build configuration
-  */
+  css: ['assets/main.css'],
+  loading: {
+    color: '#3B8070',
+    failedColor: '#FF0000'
+  },
+  plugins: [
+    '~/plugins/buefy.js',
+    '~/plugins/moment'
+  ],
+  modules: [
+    '@nuxtjs/pwa',
+    '@nuxtjs/icon'
+  ],
+  router: {
+    base: '/nuxt-blog/',
+    middleware: 'menu'
+  },
+  generate: {
+    routes: function () {
+      const posts = createClient({
+        space: apiConfig.space,
+        accessToken: apiConfig.accessToken
+      }).getEntries({
+        content_type: apiConfig.contentTypes.posts
+      })
+      .then(function (entries) {
+        return entries.items.map((item) => {
+          return item.fields.slug
+        })
+      })
+
+      const categories = createClient({
+        space: apiConfig.space,
+        accessToken: apiConfig.accessToken
+      }).getEntries({
+        content_type: apiConfig.contentTypes.categories
+      })
+      .then(function (entries) {
+        return entries.items.map((item) => {
+          return 'category/' + slugify(item.fields.title)
+        })
+      })
+
+      return Promise.all([posts, categories]).then(values => {
+        return values.join().split(',')
+      })
+    }
+  },
   build: {
     /*
     ** Run ESLINT on save
