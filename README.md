@@ -12,7 +12,7 @@ To run a blog, firstly you have to connect with API. To do that follow below ste
 
 3. Clone the repository.
 
-3. Inside `api` directory copy/paste `config.js.samle` file and rename to `config.js`.
+3. Inside `api` directory copy/paste `config.js.sample` file and rename to `config.js`.
 
 4. Overwride `config.js` with data form Contentful blog space.
 

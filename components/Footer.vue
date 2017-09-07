@@ -3,7 +3,7 @@
     <div class="container">
       <div class="content has-text-centered">
         <p>
-          Copyright &copy; 2013 - 2017
+          Copyright &copy; - 2017
         </p>
       </div>
     </div>
