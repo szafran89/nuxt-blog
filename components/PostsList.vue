@@ -2,6 +2,14 @@
   <div>
     <div class="box" v-for="post in posts" :key="post.slug">
       <article class="media">
+        <figure class="media-left">
+          <p class="image is-128x128">
+            <img
+              :src="post.featuredImage.fields.file.url"
+              :alt="post.featuredImage.fields.description"
+            >
+          </p>
+        </figure>
         <div class="media-content">
           <div class="content">
             <nuxt-link :to="'/'+ post.slug">
@@ -28,7 +36,6 @@
     methods: {
       truncate: string => `${string.replace(/<(?:.|\n)*?>/gm, '').substring(0, 140)}...`
     }
-
   }
 </script>
 

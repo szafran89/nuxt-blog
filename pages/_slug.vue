@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="content">
     <h1>{{ post.title }}</h1>
     <vue-markdown>{{ post.body }}</vue-markdown>
   </div>
