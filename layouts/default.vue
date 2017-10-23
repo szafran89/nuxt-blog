@@ -1,12 +1,12 @@
 <template>
   <div>
-    <app-nav></app-nav>
+    <app-nav/>
     <section class="section">
       <div class="container">
-        <nuxt></nuxt>
+        <nuxt/>
       </div>
     </section>
-    <app-footer></app-footer>
+    <app-footer/>
   </div>
 </template>
 

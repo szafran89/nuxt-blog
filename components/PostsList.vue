@@ -3,7 +3,7 @@
     <div class="box" v-for="post in posts" :key="post.slug">
       <article class="media">
         <figure class="media-left">
-          <p class="image is-128x128">
+          <p class="image is-64x64">
             <img
               :src="post.featuredImage.fields.file.url"
               :alt="post.featuredImage.fields.description"
@@ -22,7 +22,7 @@
               Added: {{ post.date | moment("from") }}
             </span>
             <br>
-            {{ truncate(post.body) }}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           </div>
         </div>
       </article>
