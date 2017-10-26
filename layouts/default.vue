@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page-wrapper">
     <app-nav/>
     <section class="section">
       <div class="container">
@@ -21,3 +21,14 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .page-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    & > .section {
+      flex: 1;
+    }
+  }
+</style>
