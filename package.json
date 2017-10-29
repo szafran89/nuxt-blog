@@ -5,13 +5,12 @@
   "author": "Szafran <szafran89@gmail.com>",
   "private": true,
   "dependencies": {
-    "@nuxtjs/icon": "^1.0.1",
-    "@nuxtjs/pwa": "^0.2.0",
+    "@nuxtjs/pwa": "1.0.2",
     "buefy": "^0.4.4",
     "contentful": "^4.5.0",
-    "nuxt": "1.0.0-rc7",
+    "nuxt": "1.0.0-rc11",
     "vue-moment": "^2.0.2",
-    "vue-server-renderer": "latest"
+    "vue-markdown": "^2.2.4"
   },
   "scripts": {
     "dev": "nuxt",

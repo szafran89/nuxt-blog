@@ -31,8 +31,7 @@ module.exports = {
     '~/plugins/moment'
   ],
   modules: [
-    '@nuxtjs/pwa',
-    '@nuxtjs/icon'
+    '@nuxtjs/pwa'
   ],
   router: {
     base: '/nuxt-blog/',
@@ -48,7 +47,7 @@ module.exports = {
       })
       .then(function (entries) {
         return entries.items.map((item) => {
-          return item.fields.slug
+          return item.fields.slug + '/'
         })
       })
 
@@ -60,7 +59,7 @@ module.exports = {
       })
       .then(function (entries) {
         return entries.items.map((item) => {
-          return 'category/' + slugify(item.fields.title)
+          return 'category/' + slugify(item.fields.title) + '/'
         })
       })
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="title">About</h1>
-    <div>
+    <div class="content">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ipsum commodo, scelerisque nibh eu, facilisis tellus. Sed nec egestas leo, eu elementum erat. Praesent congue nisi a lectus venenatis, at mollis dui gravida. Proin sollicitudin rhoncus eros in lobortis. Sed sodales ligula id ullamcorper elementum. Morbi non velit magna. Proin porttitor mi non felis gravida, eget eleifend dui cursus. Aenean quis magna quam. Suspendisse ac metus vitae elit aliquam laoreet.
       </p>

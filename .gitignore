@@ -12,3 +12,7 @@ dist
 
 # Custom
 /api/config.js
+
+# PWA module
+sw.*
+workbox-*

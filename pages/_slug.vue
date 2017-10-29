@@ -1,13 +1,13 @@
 <template>
-  <div>
-    <h1 class="title">
-     {{ post.title }}
-    </h1>
-    <div v-html="post.body"></div>
+  <div class="content">
+    <h1>{{ post.title }}</h1>
+    <vue-markdown>{{ post.body }}</vue-markdown>
   </div>
 </template>
 
 <script>
+  import VueMarkdown from 'vue-markdown'
+
   export default {
     head () {
       return {
@@ -23,6 +23,9 @@
       post () {
         return this.$store.state.currentPost
       }
+    },
+    components: {
+      VueMarkdown
     }
   }
 </script>
