@@ -6,7 +6,7 @@
   "private": true,
   "dependencies": {
     "@nuxtjs/pwa": "1.0.2",
-    "buefy": "^0.4.4",
+    "buefy": "^0.5.4",
     "contentful": "^4.5.0",
     "nuxt": "1.0.0-rc11",
     "vue-moment": "^2.0.2",

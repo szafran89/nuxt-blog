@@ -21,7 +21,10 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  css: ['assets/main.css'],
+  css: [
+    { src: 'assets/css/buefy-overrides.scss' },
+    { src: 'assets/css/main.scss' }
+  ],
   loading: {
     color: '#3B8070',
     failedColor: '#FF0000'
@@ -69,6 +72,11 @@ module.exports = {
     }
   },
   build: {
+    postcss: {
+      plugins: {
+        'postcss-custom-properties': false
+      }
+    },
     /*
     ** Run ESLINT on save
     */
