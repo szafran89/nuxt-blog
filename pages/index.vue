@@ -2,6 +2,20 @@
   <section class="container">
     <div>
       <h1 class="title">
+        Featured categories
+      </h1>
+      <div class="columns">
+        <div
+          class="column"
+          v-for="category in featuredCategories"
+          :key="category.id"
+        >
+          <nuxt-link class="nav-item" :to="/category/ + category.slug">
+            {{ category.title }}
+          </nuxt-link>
+        </div>
+      </div>
+      <h1 class="title">
         Posts
       </h1>
       <post-list :posts="posts"></post-list>
@@ -34,6 +48,9 @@
     computed: {
       posts () {
         return this.$store.state.posts
+      },
+      featuredCategories () {
+        return this.$store.getters.getFeaturedCategories()
       }
     }
   }

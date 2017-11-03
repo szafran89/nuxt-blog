@@ -25,8 +25,13 @@
       </span>
       <div class="nav-right nav-menu" :class="{'is-active': menuIsActive}">
         <nuxt-link class="nav-item" to="/">Home</nuxt-link>
-        <nuxt-link v-for="category in categories" :key="category.id" class="nav-item" :to="/category/ + category.slug">
-          {{ category.title}}
+        <nuxt-link
+          class="nav-item"
+          v-for="category in categories"
+          :key="category.id"
+          :to="/category/ + category.slug"
+        >
+          {{ category.title }}
         </nuxt-link>
         <nuxt-link class="nav-item" to="/about">About</nuxt-link>
       </div>

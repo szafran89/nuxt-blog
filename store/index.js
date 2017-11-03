@@ -34,12 +34,17 @@ const store = () => {
       }
     },
     getters: {
-      getPostsByCategorySlug: (state, getters) => (slug) => {
+      getPostsByCategorySlug: (state) => (slug) => {
         return state.posts.filter(post => {
           return post.categories.find(category => slugify(category.fields.title) === slug) !== undefined
         })
       },
-      getCategoryBySlug: (state, getters) => (slug) => {
+      getFeaturedCategories: (state) => (slug) => {
+        return state.categories.filter(category => {
+          return category.featured
+        })
+      },
+      getCategoryBySlug: (state) => (slug) => {
         return state.categories.find(category => category.slug === slug)
       }
     },
@@ -69,7 +74,8 @@ const store = () => {
             let entry = {
               id: item.sys.id,
               title: item.fields.title,
-              slug: slugify(item.fields.title)
+              slug: slugify(item.fields.title),
+              featured: item.fields.featured
             }
             state.categories.push(entry)
           }
