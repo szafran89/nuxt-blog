@@ -1,19 +1,24 @@
 <template>
-  <section class="container">
-    <div>
+  <div class="columns">
+    <div class="column">
       <h1 class="title">
         {{ category.title }}
       </h1>
-      <post-list :posts="posts"></post-list>
+      <post-list :posts="posts" type="regular"/>
     </div>
-  </section>
+    <div class="column is-3">
+      <sidebar/>
+    </div>
+  </div>
 </template>
 
 <script>
+  import sidebar from '~/components/Sidebar.vue'
   import postList from '~/components/PostsList.vue'
 
   export default {
     components: {
+      sidebar,
       postList
     },
     head () {

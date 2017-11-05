@@ -10,7 +10,7 @@
           v-for="category in featuredCategories"
           :key="category.id"
         >
-          <nuxt-link class="nav-item" :to="/category/ + category.slug">
+          <nuxt-link class="box nav-item" :to="/category/ + category.slug">
             {{ category.title }}
           </nuxt-link>
         </div>
@@ -18,7 +18,7 @@
       <h1 class="title">
         Posts
       </h1>
-      <post-list :posts="posts"></post-list>
+      <post-list :posts="posts" type="regular"/>
     </div>
   </section>
 </template>

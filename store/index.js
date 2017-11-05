@@ -39,10 +39,15 @@ const store = () => {
           return post.categories.find(category => slugify(category.fields.title) === slug) !== undefined
         })
       },
+      getRecentPosts: (state) => (slug) => {
+        return state.posts.sort((a, b) => {
+          return new Date(b.date) - new Date(a.date)
+        }).slice(0, 2)
+      },
       getFeaturedCategories: (state) => (slug) => {
         return state.categories.filter(category => {
           return category.featured
-        })
+        }).slice(0, 3)
       },
       getCategoryBySlug: (state) => (slug) => {
         return state.categories.find(category => category.slug === slug)

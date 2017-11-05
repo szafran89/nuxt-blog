@@ -18,7 +18,10 @@
           </span>
         </a>
       </div>
-      <span class="nav-toggle" :class="{'is-active': menuIsActive}" @click="toggleMenu">
+      <span
+        :class="['nav-toggle', {'is-active': menuIsActive}]"
+        @click="toggleMenu"
+      >
         <span></span>
         <span></span>
         <span></span>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="box" v-for="post in posts" :key="post.slug">
-      <article class="media">
+      <article :class="['media', 'post', { 'post--recent': isRecentType }]">
         <figure class="media-left">
           <p class="image is-64x64">
             <img
@@ -12,35 +12,63 @@
         </figure>
         <div class="media-content">
           <div class="content">
-            <nuxt-link :to="'/'+ post.slug">
-              <strong>
-                {{ post.title }}
-              </strong>
+            <nuxt-link class="post__link" :to="'/'+ post.slug">
+              {{ post.title }}
             </nuxt-link>
-            |
-            <span class="post-date">
-              Added: {{ post.date | moment("from") }}
+            <span class="post__date" v-if="!isRecentType">
+              | Added: {{ post.date | moment("from") }}
             </span>
-            <br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            <br v-if="!isRecentType">
+            <template v-if="!isRecentType">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            </template>
           </div>
         </div>
       </article>
+    </div>
+    <div class="box has-text-centered" v-if="!posts.length">
+      No results
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    props: ['posts'],
-    methods: {
-      truncate: string => `${string.replace(/<(?:.|\n)*?>/gm, '').substring(0, 140)}...`
+    props: {
+      posts: {
+        type: Array,
+        required: true
+      },
+      type: {
+        type: String,
+        required: true,
+        validator: function (value) {
+          return [
+            'regular',
+            'recent'
+          ].indexOf(value) !== -1
+        }
+      }
+    },
+    computed: {
+      isRecentType () {
+        return this.type === 'recent'
+      }
     }
   }
 </script>
 
-<style>
-  .post-date {
-    font-size: 12px;
+<style lang="scss">
+  .post {
+    &__link {
+      font-weight: 700;
+      .post--recent & {
+        display: block;
+        font-size: 13px;
+      }
+    }
+    &__date {
+      font-size: 13px;
+    }
   }
 </style>
