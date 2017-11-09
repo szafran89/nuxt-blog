@@ -1,3 +1,8 @@
+@import "~bulma/sass/utilities/_all";
+@import "variables/main";
+@import "variables/navbar";
+@import "~bulma";
+
 .page-enter,
 .page-leave-active {
   opacity: 0;
@@ -6,4 +11,8 @@
 .page-enter-active,
 .page-leave-active {
   transition: all 0.2s ease;
+}
+
+a {
+  transition: all 0.5s ease;
 }

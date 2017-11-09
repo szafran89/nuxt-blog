@@ -22,15 +22,13 @@ module.exports = {
     ]
   },
   css: [
-    { src: 'assets/css/buefy-overrides.scss' },
     { src: 'assets/css/main.scss' }
   ],
   loading: {
-    color: '#3B8070',
+    color: '#FF4F4F',
     failedColor: '#FF0000'
   },
   plugins: [
-    '~/plugins/buefy.js',
     '~/plugins/moment'
   ],
   modules: [
@@ -38,7 +36,8 @@ module.exports = {
   ],
   router: {
     base: '/nuxt-blog/',
-    middleware: 'menu'
+    middleware: 'menu',
+    linkExactActiveClass: 'is-active'
   },
   generate: {
     routes: function () {

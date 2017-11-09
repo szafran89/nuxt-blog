@@ -1,26 +1,31 @@
 <template>
-  <section class="container">
-    <div>
-      <h1 class="title">
-        Featured categories
-      </h1>
-      <div class="columns">
-        <div
-          class="column"
-          v-for="category in featuredCategories"
-          :key="category.id"
-        >
-          <nuxt-link class="box nav-item" :to="/category/ + category.slug">
-            {{ category.title }}
-          </nuxt-link>
-        </div>
-      </div>
-      <h1 class="title">
-        Posts
-      </h1>
-      <post-list :posts="posts" type="regular"/>
+  <div>
+    <div class="banner">
+      <img src="http://via.placeholder.com/1920x800" alt="">
     </div>
-  </section>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">
+          Featured categories
+        </h1>
+        <div class="columns">
+          <div
+            class="column"
+            v-for="category in featuredCategories"
+            :key="category.id"
+          >
+            <nuxt-link class="box nav-item" :to="/category/ + category.slug">
+              {{ category.title }}
+            </nuxt-link>
+          </div>
+        </div>
+        <h1 class="title">
+          Posts
+        </h1>
+        <post-list :posts="posts" type="regular"/>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>

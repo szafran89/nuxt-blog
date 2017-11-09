@@ -1,11 +1,7 @@
 <template>
   <div class="page-wrapper">
     <app-nav/>
-    <section class="section">
-      <div class="container">
-        <nuxt/>
-      </div>
-    </section>
+    <nuxt/>
     <app-footer/>
   </div>
 </template>

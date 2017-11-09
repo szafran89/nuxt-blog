@@ -1,15 +1,19 @@
 <template>
-  <div class="columns">
-    <div class="column">
-      <h1 class="title">
-        {{ category.title }}
-      </h1>
-      <post-list :posts="posts" type="regular"/>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <h1 class="title">
+            {{ category.title }}
+          </h1>
+          <post-list :posts="posts" type="regular"/>
+        </div>
+        <div class="column is-3">
+          <sidebar/>
+        </div>
+      </div>
     </div>
-    <div class="column is-3">
-      <sidebar/>
-    </div>
-  </div>
+  </section>
 </template>
 
 <script>

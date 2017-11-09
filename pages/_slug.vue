@@ -1,8 +1,12 @@
 <template>
-  <div class="content">
-    <h1>{{ post.title }}</h1>
-    <vue-markdown>{{ post.body }}</vue-markdown>
-  </div>
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <h1>{{ post.title }}</h1>
+        <vue-markdown>{{ post.body }}</vue-markdown>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>

@@ -1,10 +1,8 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <div class="content has-text-centered">
-        <p>
-          Copyright &copy; - 2017
-        </p>
+      <div class="content has-text-centered has-text-white">
+        Copyright &copy; - 2017
       </div>
     </div>
   </footer>
@@ -12,6 +10,6 @@
 
 <style lang="scss">
   .footer {
-    padding: 3rem 1.5rem;
+    padding: 1rem 1.5rem;
   }
 </style>
