@@ -1,15 +1,19 @@
 <template>
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column">
-          <h1 class="title">
-            {{ category.title }}
-          </h1>
-          <post-list :posts="posts" type="regular"/>
-        </div>
-        <div class="column is-3">
-          <sidebar/>
+  <section>
+    <h1 class="page-heading">
+      <div class="container">
+        {{ category.title }}
+      </div>
+    </h1>
+    <div class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <post-list :posts="posts" type="regular"/>
+          </div>
+          <div class="column is-3">
+            <sidebar/>
+          </div>
         </div>
       </div>
     </div>
@@ -52,3 +56,14 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+  .page-heading {
+    margin-bottom: 0;
+    padding: 35px 0;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #000;
+    background-color: #f6f6f6;
+  }
+</style>
