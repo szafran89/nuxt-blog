@@ -22,7 +22,7 @@ To run a blog, firstly you have to connect with API. To do that follow below ste
 # install dependencies
 $ npm install # Or yarn install
 
-# serve with hot reload at localhost:3000
+# serve with hot reload at localhost:3000/nuxt-blog
 $ npm run dev
 
 # build for production and launch server
