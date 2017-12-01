@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <div class="content has-text-centered has-text-white">
+      <div class="content has-text-centered">
         Copyright &copy; - 2017
       </div>
     </div>

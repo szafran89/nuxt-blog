@@ -3,7 +3,7 @@
     <div class="banner">
       <img src="http://via.placeholder.com/1920x800" alt="">
     </div>
-    <section class="section">
+    <section class="main-section">
       <div class="container">
         <h1 class="title">
           Featured categories
@@ -60,3 +60,9 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+  .banner img {
+    width: 100%;
+  }
+</style>

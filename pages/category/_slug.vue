@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="main-section">
     <h1 class="page-heading">
       <div class="container">
         {{ category.title }}
