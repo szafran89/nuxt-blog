@@ -1,8 +1,8 @@
 <template>
   <section class="main-section">
+    <app-heading title="About"/>
     <div class="container">
       <div class="content">
-        <h1>About</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ipsum commodo, scelerisque nibh eu, facilisis tellus. Sed nec egestas leo, eu elementum erat. Praesent congue nisi a lectus venenatis, at mollis dui gravida. Proin sollicitudin rhoncus eros in lobortis. Sed sodales ligula id ullamcorper elementum. Morbi non velit magna. Proin porttitor mi non felis gravida, eget eleifend dui cursus. Aenean quis magna quam. Suspendisse ac metus vitae elit aliquam laoreet.
         </p>
@@ -21,11 +21,15 @@
 </template>
 
 <script>
+  import appHeading from '~/components/elements/AppMainHeading.vue'
   export default {
     head () {
       return {
         title: 'About'
       }
+    },
+    components: {
+      appHeading
     }
   }
 </script>

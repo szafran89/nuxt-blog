@@ -1,10 +1,6 @@
 <template>
   <section class="main-section">
-    <h1 class="page-heading">
-      <div class="container">
-        {{ category.title }}
-      </div>
-    </h1>
+    <app-heading :title="category.title"/>
     <div class="section">
       <div class="container">
         <div class="columns">
@@ -21,11 +17,13 @@
 </template>
 
 <script>
+  import appHeading from '~/components/elements/AppMainHeading.vue'
   import sidebar from '~/components/Sidebar.vue'
   import postList from '~/components/PostsList.vue'
 
   export default {
     components: {
+      appHeading,
       sidebar,
       postList
     },
@@ -56,14 +54,3 @@
     }
   }
 </script>
-
-<style lang="scss" scoped>
-  .page-heading {
-    margin-bottom: 0;
-    padding: 35px 0;
-    font-size: 2rem;
-    font-weight: 300;
-    color: #000;
-    background-color: #f6f6f6;
-  }
-</style>
