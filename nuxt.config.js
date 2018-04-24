@@ -22,14 +22,15 @@ module.exports = {
     ]
   },
   css: [
-    { src: 'assets/css/main.scss' }
+    { src: 'assets/sass/main.scss' }
   ],
   loading: {
     color: '#FF4F4F',
     failedColor: '#FF0000'
   },
   plugins: [
-    '~/plugins/moment'
+    '~/plugins/moment',
+    '~/plugins/flexboxgrid'
   ],
   modules: [
     '@nuxtjs/pwa'

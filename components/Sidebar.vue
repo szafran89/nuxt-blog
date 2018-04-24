@@ -35,19 +35,4 @@
 </script>
 
 <style lang="scss">
-  @import "../assets/css/variables/main";
-
-  .widget {
-    margin-bottom: $size-4;
-    &__header {
-      margin-bottom: $size-4;
-      padding: $size-6;
-      text-transform: uppercase;
-      background-color: $light;
-      color: $black;
-    }
-    &__content {
-      font-size: 14px;
-    }
-  }
 </style>

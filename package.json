@@ -6,9 +6,9 @@
   "private": true,
   "dependencies": {
     "@nuxtjs/pwa": "1.0.2",
-    "bulma": "0.6.1",
     "contentful": "^4.5.0",
     "nuxt": "next",
+    "vue-flexboxgrid": "^1.5.0",
     "vue-markdown": "^2.2.4",
     "vue-moment": "^2.0.2"
   },
