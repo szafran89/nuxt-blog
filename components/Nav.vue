@@ -15,19 +15,19 @@
           <nav class="menu">
             <ul class="menu__wrapper">
               <li class="menu__item">
-                <nuxt-link class="nav-item" to="/">Home</nuxt-link>
+                <nuxt-link class="menu__item-link" to="/">Home</nuxt-link>
               </li>
               <li
                 class="menu__item"
                 v-for="category in categories"
                 :key="category.id"
               >
-                <nuxt-link :to="/category/ + category.slug">
+                <nuxt-link class="menu__item-link" :to="/category/ + category.slug">
                   {{ category.title }}
                 </nuxt-link>
               </li>
               <li class="menu__item">
-                <nuxt-link class="nav-item" to="/about">About</nuxt-link>
+                <nuxt-link class="menu__item-link" to="/about">About</nuxt-link>
               </li>
             </ul>
           </nav>
@@ -55,6 +55,7 @@
 
 <style lang="scss">
   .header {
+    background-color: $color-secondary;
     &__row {
       padding: 10px 0;
     }
@@ -74,7 +75,11 @@
     }
 
     &__item {
-      padding: 0 10px;
+      padding: 0 $spacer--medium;
+      &-link {
+        color: $white;
+        text-decoration: none;
+      }
     }
   }
 

@@ -33,7 +33,8 @@ module.exports = {
     '~/plugins/flexboxgrid'
   ],
   modules: [
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    ['nuxt-sass-resources-loader', './assets/sass/_resources.scss']
   ],
   router: {
     base: '/nuxt-blog/',
