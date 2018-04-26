@@ -13,7 +13,7 @@
         </column>
         <column xs="9">
           <nav class="menu">
-            <ul class="menu__wrapper">
+            <ul class="row end-xs menu__wrapper">
               <li class="menu__item">
                 <nuxt-link class="menu__item-link" to="/">Home</nuxt-link>
               </li>
@@ -53,7 +53,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .header {
     background-color: $color-secondary;
     &__row {
@@ -69,8 +69,6 @@
 
   .menu {
     &__wrapper {
-      display: flex;
-      justify-content: flex-end;
       list-style: none;
     }
 
