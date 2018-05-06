@@ -1,16 +1,19 @@
 <template>
-  <section class="section">
-    <div class="container">
-      <div class="content">
-        <h1>{{ post.title }}</h1>
-        <vue-markdown>{{ post.body }}</vue-markdown>
-      </div>
-    </div>
-  </section>
+  <main>
+    <app-heading :title="post.title" />
+    <container>
+      <row class="post">
+        <column xs="12">
+          <vue-markdown>{{ post.body }}</vue-markdown>
+        </column>
+      </row>
+    </container>
+  </main>
 </template>
 
 <script>
   import VueMarkdown from 'vue-markdown'
+  import appHeading from '~/components/elements/AppMainHeading.vue'
 
   export default {
     head () {
@@ -29,7 +32,15 @@
       }
     },
     components: {
-      VueMarkdown
+      VueMarkdown,
+      appHeading
     }
   }
 </script>
+
+<style lang="scss" scoped>
+  .post {
+    margin: $spacer--large 0;
+    line-height: 1.5;
+  }
+</style>

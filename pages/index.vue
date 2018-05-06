@@ -1,39 +1,58 @@
 <template>
-  <div>
+  <main>
     <div class="banner">
-      <img src="http://via.placeholder.com/1920x800" alt="">
+      <img src="~/static/Screenshot at kwi 27 01-30-35.png" alt="">
     </div>
-    <section class="main-section">
-      <div class="container">
-        <h1 class="title">
-          Featured categories
-        </h1>
-        <div class="columns">
-          <div
-            class="column"
-            v-for="category in featuredCategories"
-            :key="category.id"
-          >
-            <nuxt-link class="box nav-item" :to="/category/ + category.slug">
-              {{ category.title }}
-            </nuxt-link>
-          </div>
-        </div>
-        <h1 class="title">
-          Posts
-        </h1>
-        <post-list :posts="posts" type="regular"/>
-      </div>
-    </section>
-  </div>
+    <container>
+      <row>
+        <column xs="4" class="home-box">
+          <nuxt-link class="home-box__link" to="/about">
+            <img
+              class="home-box__image"
+              src="http://ddthemesdemo.com/pesto-blog/wp-content/themes/pesto-blog/images/promo1.jpg"
+              alt=""
+            >
+          </nuxt-link>
+        </column>
+        <column xs="4" class="home-box">
+          <nuxt-link class="home-box__link" to="/category">
+            <img
+              class="home-box__image"
+              src="http://ddthemesdemo.com/pesto-blog/wp-content/themes/pesto-blog/images/promo2.jpg"
+              alt=""
+            >
+          </nuxt-link>
+        </column>
+        <column xs="4" class="home-box">
+          <nuxt-link class="home-box__link" to="/category">
+            <img
+              class="home-box__image"
+              src="http://ddthemesdemo.com/pesto-blog/wp-content/themes/pesto-blog/images/promo3.jpg"
+              alt=""
+            >
+          </nuxt-link>
+        </column>
+      </row>
+      <row>
+        <column xs="9">
+          <post-list :posts="posts" />
+        </column>
+        <column xs="3">
+          <sidebar />
+        </column>
+      </row>
+    </container>
+  </main>
 </template>
 
 <script>
   import postList from '~/components/PostsList.vue'
+  import sidebar from '~/components/Sidebar.vue'
 
   export default {
     components: {
-      postList
+      postList,
+      sidebar
     },
     head () {
       return {
@@ -64,5 +83,15 @@
 <style lang="scss" scoped>
   .banner img {
     width: 100%;
+    vertical-align: top;
+    margin-bottom: $spacer--small;
+  }
+
+  .home-box {
+    padding: $spacer--small;
+
+    &__image {
+      width: 100%;
+    }
   }
 </style>

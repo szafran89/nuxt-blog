@@ -22,7 +22,10 @@
                 v-for="category in categories"
                 :key="category.id"
               >
-                <nuxt-link class="menu__item-link" :to="/category/ + category.slug">
+                <nuxt-link
+                  class="menu__item-link"
+                  :to="/category/ + category.slug"
+                >
                   {{ category.title }}
                 </nuxt-link>
               </li>
@@ -55,7 +58,7 @@
 
 <style lang="scss" scoped>
   .header {
-    background-color: $color-secondary;
+    // background-color: $color-secondary;
     &__row {
       padding: 10px 0;
     }
@@ -75,7 +78,7 @@
     &__item {
       padding: 0 $spacer--medium;
       &-link {
-        color: $white;
+        color: #000;
         text-decoration: none;
       }
     }

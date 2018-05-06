@@ -1,15 +1,16 @@
 <template>
   <footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
+    <container>
+      <row center-xs>
         Copyright &copy; - 2017
-      </div>
-    </div>
+      </row>
+    </container>
   </footer>
 </template>
 
 <style lang="scss">
   .footer {
-    padding: 1rem 1.5rem;
+    padding: 20px 0;
+    border-top: 1px solid #f1f1f1;
   }
 </style>

@@ -1,18 +1,16 @@
 <template>
   <section class="main-section">
     <app-heading :title="category.title"/>
-    <div class="section">
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            <post-list :posts="posts" type="regular"/>
-          </div>
-          <div class="column is-3">
-            <sidebar/>
-          </div>
-        </div>
-      </div>
-    </div>
+    <container>
+      <row>
+        <column xs="9">
+          <post-list :posts="posts" />
+        </column>
+        <column xs="3">
+          <sidebar />
+        </column>
+      </row>
+    </container>
   </section>
 </template>
 
