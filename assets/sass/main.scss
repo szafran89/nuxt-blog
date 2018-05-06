@@ -2,6 +2,11 @@
   padding: 0 20px;
 }
 
+.row {
+  padding-left: -10px;
+  padding-right: -10px;
+}
+
 .page-enter,
 .page-leave-active {
   opacity: 0;
