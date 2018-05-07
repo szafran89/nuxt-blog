@@ -10,7 +10,8 @@
 
 <style lang="scss">
   .footer {
-    padding: 20px 0;
+    margin-top: $spacer--large;
+    padding: $spacer--large 0;
     border-top: 1px solid #f1f1f1;
   }
 </style>
